@@ -91,10 +91,10 @@ const Body = () => {
                 </div>
 
                 <div class="lg:bg-[transparent] cursor-pointer bg-[#292929] lg:h-[200px] md:h-[200px] lg:mt-0 md:mt-0 mt-[10px] lg:flex md:flex gap-4 text-white p-[15px] items-center">
-                  <div class="w-12 h-12 p-[25px] lg:mt-[-50px] md:mt-[-50px] bg-orange-500 rounded-full flex items-center justify-center">
+                  <div class="w-12 h-12 md:h-13 p-[25px] lg:mt-[-50px] md:mt-[-50px] bg-orange-500 rounded-full flex items-center justify-center">
                     <i class="fas fa-headset text-white text-2xl"></i>
                   </div>
-                  <div className=" p-[5px]">
+                  <div className=" p-[5px] ">
                     <h1 class="font-semibold mb-[10px] mt-[10px] lg:mt-0 md:mt-0 text-[23px]">
                       24x7 Customer Supports
                     </h1>
@@ -106,16 +106,31 @@ const Body = () => {
                   </div>
                 </div>
               </div>
+
+              <div className=" w-[100%] lg:p-[30px] p-[5px]  ">
+                <div className="grid items-center mt-[40px] justify-around ">
+                  <h1 className="lg:text-[45px] md:text-[37px] text-[white] text-[27px] text-center font-['Playfair_Display']">
+                    Anticipate needs deliver 
+                  </h1>
+                  <h1  className="lg:text-[45px] text-[27px]  md:text-[37px]  text-[white] text-center font-['Playfair_Display']">extraordinary customer delight</h1>
+                  <h1 className="lg:text-[18px] text-[17px]   md:text-[21px] text-[white] text-center ">
+                    Join thousands who trust us for quality and lasting
+                    relationships
+                  </h1>
+                </div>
+
+                <div className="lg:flex block justify-between">
+                  <div className="mt-[30px] w-[100%] lg:w-[60%] ">
+                    <Imageslider />
+                  </div>
+                  <div className="mt-[30px] w-[100%] lg:w-[30%]">
+                    <Imageslider />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <div className="mt-[30px]">
-          <Imageslider />
-        </div>
-        <div>jskdghsdjvidv</div>
-        <div>jskdghsdjvidv</div>
-        <div>jskdghsdjvidv</div>
-        <div>jskdghsdjvidv</div>
       </div>
     </>
   );

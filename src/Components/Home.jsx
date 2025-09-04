@@ -5,7 +5,7 @@ import Imageslider from "./Imageslider";
 
 const Home = () => {
   return (
-    <div className="p-[20px]">
+    <div className="lg:p-[20px] p-[2px] rounded-[15px]">
       <Header />
       <Body/>
     </div>

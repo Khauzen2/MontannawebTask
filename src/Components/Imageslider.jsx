@@ -6,9 +6,25 @@ import Image4 from "../Images/image4.jpg";
 import Image5 from "../Images/image5.webp";
 import Image6 from "../Images/image6.jpg";
 import Image7 from "../Images/home.webp";
+import Image8 from "../Images/01.jpg";
+import Image9 from "../Images/02.jpg";
+import Image10 from "../Images/03.jpg";
+import Image11 from "../Images/04.jpg";
 
 const Imageslider = () => {
-  const images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7];
+  const images = [
+    Image1,
+    Image2,
+    Image3,
+    Image4,
+    Image5,
+    Image6,
+    Image7,
+    Image8,
+    Image9,
+    Image10,
+    Image11,
+  ];
   const [image, setImage] = useState(0);
 
   useEffect(() => {
@@ -21,24 +37,26 @@ const Imageslider = () => {
 
   return (
     <div
-      className=" lg:h-[300px] md:h-[400px] h-[300px] lg:w-[45%] relative p-[20px] "
+      className=" lg:h-[350px] w-full md:h-[400px]  rounded-[20px] h-[300px] relative p-[20px] "
       style={{
         backgroundImage: `url(${images[image]})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <b>
-        <p className="text-[#fff] relative float-right lg:mt-[240px] mt-[]">
-          {image + 1}/{images.length}
-        </p>
-      </b>
+      <div className="flex justify-between">
+        <b>
+          <p className="text-[black] text-[23px] md:mt-[320px] font-['Playfair_Display'] relative float-right lg:mt-[240px] mt-[210px]">
+            Marketing Analytics
+          </p>
+        </b>
+        <b>
+          <p className="text-[#fff] relative md:mt-[320px] float-right lg:mt-[270px] mt-[230px]">
+            {image + 1}/{images.length}
+          </p>
+        </b>
+      </div>
     </div>
-    /* <img
-        className="w-[44%] h-[300px] rounded-[25px] "
-        src={images[image]}
-        alt={` Slide ${image + 1}`}
-      /> */
   );
 };
 
