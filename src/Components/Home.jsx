@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../Components/Header";
 import Body from "./Body";
+import Imageslider from "./Imageslider";
 
 const Home = () => {
   return (

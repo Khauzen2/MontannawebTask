@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Cardvideo from "../Images/cardvideo.mp4";
 import Button from "./Button";
 import Banner from "../Images/banner.webp";
+import Imageslider from "./Imageslider";
 
 const Body = () => {
+  const [scroll, setScroll] = useState(false);
   return (
     <>
       <div className="relative mt-[-10px] mb-[20px] w-full h-screen  ">
@@ -14,7 +16,7 @@ const Body = () => {
                 Effortlessly Growth Organize{" "}
                 <span className="bg-[orange] lg:p-[5px] p-[5px] rounded-[15px]">
                   Product
-                </span>{" "}
+                </span>
                 Management
               </h1>
               <p className="lg:text-[23px] text-[20px] mt-[10px] ">
@@ -30,85 +32,90 @@ const Body = () => {
           </div>
         </div>
 
-        {/* <video
-        src={Cardvideo}
-        autoPlay
-        loop
-        muted
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      /> */}
+        <section id="Services">
+          <div className="bg-[rgb(10,20,40)]  ;">
+            <div className="p-[20px] ">
+              <h1 className="text-[white] font-['Playfair_Display'] lg:text-[30px] text-[22px] text-center">
+                What our clients say about us..
+              </h1>
+              <h1 className="text-[white] font-['Playfair_Display']  lg:text-[30px] text-[22px] mt-[70px] text-center">
+                Customer testimonials that speak for themselves.
+              </h1>
+              <div class="md:grid md:grid-cols-2 md:grid-rows-2 md:gap-4 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-4 block lg:w-full md:w-full lg:p-[50px] p-[0px]">
+                <div class="lg:bg-[transparent] cursor-pointer bg-[#292929] lg:h-[200px] md:h-[200px] lg:mt-0 md:mt-0 mt-[10px] lg:flex md:flex block gap-4 text-white p-[15px] items-center">
+                  <div class="w-12 h-12 p-[25px] lg:mt-[-50px] md:mt-[-50px] bg-orange-500 rounded-full flex items-center justify-center">
+                    <i class="fas fa-bullhorn text-white text-2xl"></i>
+                  </div>
+                  <div className=" p-[5px]">
+                    <h1 class="font-semibold mb-[10px] mt-[10px] lg:mt-0 md:mt-0 text-[25px]">
+                      Digital Marketing
+                    </h1>
+                    <p class="text-[18px]">
+                      Its flexibility allows you to adapt it for any business
+                      need from fintech and analytics tools to CRM platforms and
+                      admin.
+                    </p>
+                  </div>
+                </div>
 
-        <div className="bg-[rgb(10,20,40)]  ;">
-          <div className="p-[20px] ">
-            <h1 className="text-[white] font-['Playfair_Display'] lg:text-[30px] text-[22px] text-center">
-              What our clients say about us..
-            </h1>
-            <h1 className="text-[white] font-['Playfair_Display']  lg:text-[30px] text-[22px] mt-[70px] text-center">
-              Customer testimonials that speak for themselves.
-            </h1>
-            <div class="md:grid md:grid-cols-2 md:grid-rows-2 md:gap-4 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-4 block lg:w-full md:w-full lg:p-[50px] p-[0px]">
-              <div class="lg:bg-[transparent] cursor-pointer bg-[#292929] lg:h-[200px] md:h-[200px] lg:mt-0 md:mt-0 mt-[10px] lg:flex md:flex block gap-4 text-white p-[15px] items-center">
-                <div class="w-12 h-12 p-[25px] lg:mt-[-50px] md:mt-[-50px] bg-orange-500 rounded-full flex items-center justify-center">
-                  <i class="fas fa-bullhorn text-white text-2xl"></i>
+                <div class="lg:bg-[transparent] cursor-pointer bg-[#292929] lg:h-[200px] md:h-[200px] lg:mt-0 md:mt-0 mt-[10px] lg:flex md:flex gap-4 text-white p-[15px] items-center">
+                  <div class="w-12 h-12 p-[25px] lg:mt-[-50px] md:mt-[-50px] bg-orange-500 rounded-full flex items-center justify-center">
+                    <i class="fas fa-lightbulb text-white text-2xl"></i>
+                  </div>
+                  <div className=" p-[5px]">
+                    <h1 class="font-semibold mb-[10px] mt-[10px] lg:mt-0 md:mt-0 text-[25px]">
+                      Marketing Strategy
+                    </h1>
+                    <p class="text-[18px]">
+                      Its flexibility allows you to adapt it for any business
+                      need from fintech and analytics tools to CRM platforms and
+                      admin.
+                    </p>
+                  </div>
                 </div>
-                <div className=" p-[5px]">
-                  <h1 class="font-semibold mb-[10px] mt-[10px] lg:mt-0 md:mt-0 text-[25px]">
-                    Digital Marketing
-                  </h1>
-                  <p class="text-[18px]">
-                    Its flexibility allows you to adapt it for any business need
-                    from fintech and analytics tools to CRM platforms and admin.
-                  </p>
-                </div>
-              </div>
 
-              <div class="lg:bg-[transparent] cursor-pointer bg-[#292929] lg:h-[200px] md:h-[200px] lg:mt-0 md:mt-0 mt-[10px] lg:flex md:flex gap-4 text-white p-[15px] items-center">
-                <div class="w-12 h-12 p-[25px] lg:mt-[-50px] md:mt-[-50px] bg-orange-500 rounded-full flex items-center justify-center">
-                  <i class="fas fa-lightbulb text-white text-2xl"></i>
+                <div class="lg:bg-[transparent] cursor-pointer bg-[#292929] lg:h-[200px] md:h-[200px] lg:mt-0 md:mt-0 mt-[10px] lg:flex md:flex gap-4 text-white p-[15px] items-center">
+                  <div class="w-12 h-12 p-[25px] lg:mt-[-50px] md:mt-[-50px] bg-orange-500 rounded-full flex items-center justify-center">
+                    <i class="fas fa-code text-white text-2xl"></i>
+                  </div>
+                  <div className=" p-[5px] ">
+                    <h1 class="font-semibold mb-[10px] mt-[10px] lg:mt-0 md:mt-0 text-[25px]">
+                      Made for Developer
+                    </h1>
+                    <p class="text-[18px]">
+                      Its flexibility allows you to adapt it for any business
+                      need from fintech and analytics tools to CRM platforms and
+                      admin.
+                    </p>
+                  </div>
                 </div>
-                <div className=" p-[5px]">
-                  <h1 class="font-semibold mb-[10px] mt-[10px] lg:mt-0 md:mt-0 text-[25px]">
-                    Marketing Strategy
-                  </h1>
-                  <p class="text-[18px]">
-                    Its flexibility allows you to adapt it for any business need
-                    from fintech and analytics tools to CRM platforms and admin.
-                  </p>
-                </div>
-              </div>
 
-              <div class="lg:bg-[transparent] cursor-pointer bg-[#292929] lg:h-[200px] md:h-[200px] lg:mt-0 md:mt-0 mt-[10px] lg:flex md:flex gap-4 text-white p-[15px] items-center">
-                <div class="w-12 h-12 p-[25px] lg:mt-[-50px] md:mt-[-50px] bg-orange-500 rounded-full flex items-center justify-center">
-                  <i class="fas fa-code text-white text-2xl"></i>
-                </div>
-                <div className=" p-[5px] ">
-                  <h1 class="font-semibold mb-[10px] mt-[10px] lg:mt-0 md:mt-0 text-[25px]">
-                    Made for Developer
-                  </h1>
-                  <p class="text-[18px]">
-                    Its flexibility allows you to adapt it for any business need
-                    from fintech and analytics tools to CRM platforms and admin.
-                  </p>
-                </div>
-              </div>
-
-              <div class="lg:bg-[transparent] cursor-pointer bg-[#292929] lg:h-[200px] md:h-[200px] lg:mt-0 md:mt-0 mt-[10px] lg:flex md:flex gap-4 text-white p-[15px] items-center">
-                <div class="w-12 h-12 p-[25px] lg:mt-[-50px] md:mt-[-50px] bg-orange-500 rounded-full flex items-center justify-center">
-                  <i class="fas fa-headset text-white text-2xl"></i>
-                </div>
-                <div className=" p-[5px]">
-                  <h1 class="font-semibold mb-[10px] mt-[10px] lg:mt-0 md:mt-0 text-[23px]">
-                    24x7 Customer Supports
-                  </h1>
-                  <p class="text-[18px]">
-                    Its flexibility allows you to adapt it for any business need
-                    from fintech and analytics tools to CRM platforms and admin.
-                  </p>
+                <div class="lg:bg-[transparent] cursor-pointer bg-[#292929] lg:h-[200px] md:h-[200px] lg:mt-0 md:mt-0 mt-[10px] lg:flex md:flex gap-4 text-white p-[15px] items-center">
+                  <div class="w-12 h-12 p-[25px] lg:mt-[-50px] md:mt-[-50px] bg-orange-500 rounded-full flex items-center justify-center">
+                    <i class="fas fa-headset text-white text-2xl"></i>
+                  </div>
+                  <div className=" p-[5px]">
+                    <h1 class="font-semibold mb-[10px] mt-[10px] lg:mt-0 md:mt-0 text-[23px]">
+                      24x7 Customer Supports
+                    </h1>
+                    <p class="text-[18px]">
+                      Its flexibility allows you to adapt it for any business
+                      need from fintech and analytics tools to CRM platforms and
+                      admin.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </section>
+        <div className="mt-[30px]">
+          <Imageslider />
         </div>
+        <div>jskdghsdjvidv</div>
+        <div>jskdghsdjvidv</div>
+        <div>jskdghsdjvidv</div>
+        <div>jskdghsdjvidv</div>
       </div>
     </>
   );

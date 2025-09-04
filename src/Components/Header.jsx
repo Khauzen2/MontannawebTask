@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import LOGO from "../Images/LOGO.png";
+import Button from "./Button";
 
 const Header = () => {
   const [scroll, setCroll] = useState(false);
   return (
     <section className="  lg:pb-[15px] p-0 ">
       <div className="bg-[hsla(0,0%,0%,1)] w-[100%] lg:w-[100%] p-[15px] flex justify-between items-center rounded-[0px] lg:rounded-[25px]">
-        <div className="cursor-pointer  w-[20%]">
-          <img className="w-[54%] lg:w-[24%] ml-[20px]" src={LOGO} />
+        <div className="cursor-pointer  w-[20%] logoContainer">
+          <img className="w-[64%] lg:w-[24%] ml-[20px] logo" src={LOGO} />
         </div>
 
         <div className="hidden lg:block  w-[70%] p-[10px] items-center justify-center ">
@@ -33,7 +34,7 @@ const Header = () => {
         </div>
 
         <div className="hidden lg:block w-[16%] cursor-pointer  text-[white] ">
-          Get in touch
+          <Button props=" Get in touch" />
         </div>
         <div className="lg:hidden block  ">
           <motion.i
